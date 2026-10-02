@@ -1,0 +1,22 @@
+{
+  "name": "digibook",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Perpustakaan pribadi: baca PDF, Word, Markdown, dan teks seperti buku. Berjalan sepenuhnya di peramban, tanpa AI.",
+  "scripts": {
+    "build": "node build.mjs",
+    "lint": "node build.mjs && node test/lint.mjs",
+    "serve": "node test/server.mjs",
+    "test": "node test/t1-desktop.mjs && node test/t2-pdf.mjs && node test/t3-flow.mjs && node test/t4-mobile.mjs && node test/t9-temp.mjs && node test/t10-misc.mjs",
+    "docs": "cd testdocs && python3 make_docs.py"
+  },
+  "devDependencies": {
+    "acorn": "^8.14.0",
+    "acorn-walk": "^8.3.4",
+    "dompurify": "3.4.14",
+    "jszip": "3.10.1",
+    "marked": "18.0.10",
+    "pdfjs-dist": "6.2.108",
+    "playwright": "1.56.0"
+  }
+}
